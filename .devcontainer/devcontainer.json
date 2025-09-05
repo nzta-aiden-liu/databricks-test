@@ -1,4 +1,41 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {}
+    "name": "Python Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": true,
+            "version": "os-provided"
+        },
+        "ghcr.io/devcontainers/features/terraform:1": {
+            "installTerraformDocs": true,
+            "version": "latest",
+            "tflint": "latest",
+            "terragrunt": "latest"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts",
+            "nodeGypDependencies": true,
+            "nvmInstallPath": "/usr/local/share/nvm",
+            "nvmVersion": "latest"
+        }
+    },
+    "postCreateCommand": "git config --global core.eol lf && git config --global core.autocrlf input && git config --global user.name 'bot' && git config --global user.email 'bot-databricks@dataops.us.kg' && curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sudo sh && databricks -v",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "hashicorp.terraform",
+                "Meezilla.json",
+                "samuelcolvin.jinjahtml",
+                "redhat.vscode-yaml",
+                "hediet.vscode-drawio",
+                "ms-azuretools.vscode-azureresourcegroups",
+                "databricks.databricks"
+            ]
+        }
+    }
 }

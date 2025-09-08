@@ -22,8 +22,7 @@
                 "samuelcolvin.jinjahtml",
                 "redhat.vscode-yaml",
                 "hediet.vscode-drawio",
-                "ms-azuretools.vscode-azureresourcegroups",
-                "databricks.databricks"
+                "ms-azuretools.vscode-azureresourcegroups"
             ]
         }
     }

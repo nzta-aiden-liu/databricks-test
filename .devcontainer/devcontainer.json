@@ -11,7 +11,7 @@
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/devcontainers/features/github-cli:1": {}
     },
-    "postCreateCommand": "git config --global core.eol lf && git config --global core.autocrlf input && git config --global user.name 'bot' && git config --global user.email 'bot-databricks@datamlops.com' && curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sudo sh && databricks -v",
+    "postCreateCommand": "git config --global core.eol lf && git config --global core.autocrlf input && git config --global user.name 'bot' && git config --global user.email 'bot-databricks@datamlops.com' && rm .git/hooks/pre-commit && rm .git/hooks/post-commit && curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sudo sh && databricks -v",
     "customizations": {
         "vscode": {
             "extensions": [

@@ -52,5 +52,5 @@ token=<token>
 ```
 Copy the `access_token` and paste in ~/.databrickscfg file at `token=`, reconnect databricks vscode extension if needed.
 
-8.Install `databricks-connect` in current python environment, by running `pip install databricks-connect`.
-9.In [test_notebook](./test_notebook.ipynb), it will be good to run cell 1 and make connection to databricks serverless compute.
+8. Install `databricks-connect` in current python environment, by running `pip install databricks-connect`.
+9. In [test_notebook](./test_notebook.ipynb), it will be good to run cell 1 and make connection to databricks serverless compute.
